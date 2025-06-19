@@ -34,5 +34,9 @@ const forEachLoop = arr2.forEach((elem) => console.log(elem*2));
 
 //arr2.sort()
 console.log(arr2.sort(),arr2)
-
+const filterData = arr2.filter((elem) => elem<5)
+console.log(filterData);
+const reduceData = arr2.reduce((acc,elem) =>acc+elem,0)
+console.log(reduceData)
+//functions
 
