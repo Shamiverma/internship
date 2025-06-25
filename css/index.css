@@ -1,3 +1,9 @@
-h1{
-    text-align: center;
+h2{
+    border:5px solid red;
 }
+/* cascading style sheets can be added in html by three ways:-
+1.inline
+2.internal css 
+3.external css
+same with javascript 
+ */
