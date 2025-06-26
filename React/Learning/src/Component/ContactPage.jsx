@@ -4,12 +4,12 @@ import React from 'react'
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
-      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-lg p-8">
-        <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">Contact Us</h2>
+    <div className="min-h-screen bg-emerald-100 flex items-center justify-center p-6">
+      <div className="w-full max-w-2xl bg-emerald rounded-2xl shadow-lg p-8">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
         <form className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <label className="block text-sm font-medium text-gray-800 mb-1">Name</label>
             <input
               type="text"
               placeholder="Your Name"
@@ -18,7 +18,7 @@ const ContactPage = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <label className="block text-sm font-medium text-gray-800 mb-1">Email</label>
             <input
               type="email"
               placeholder="you@example.com"
@@ -27,7 +27,7 @@ const ContactPage = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <label className="block text-sm font-medium text-gray-800 mb-1">Message</label>
             <textarea
               rows="4"
               placeholder="Your message..."
@@ -37,7 +37,7 @@ const ContactPage = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition duration-300"
+            className="w-full bg-pink-800 text-white py-2 rounded-xl hover:bg-pink-800 transition duration-300"
           >
             Send Message
           </button>

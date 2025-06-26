@@ -3,7 +3,7 @@ import Body from "../Component/Body";
 const Home = () => {
   return (
     <>
-    <Body />
+   <Body />
     </>
   );
 };
