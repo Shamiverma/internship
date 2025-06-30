@@ -1,25 +1,45 @@
-import react,{useState} from "react";
+import { useEffect, useState } from 'react'
+import requests from './netflix.API'
+import axios from "axios";
 
-const Home = () => {
-  const[number,setNumber]= useState(0);
-  const substract = () =>setNumber(number-1);
+console.log(requests);
+
+const home = () => {
+  const [netflixData, setNetflixData] = useState([]);
+  console.log(netflixData);
+
+  const getData = () => {
+    axios.get(requests.requestPopular).then((res) => setNetflixData(res.data.results)).catch((err) => console.log(err));
+  };
+
+useEffect(() => {
+  getData()
+},[])
+
 
   return (
     <>
-      <div className="w-full h-screen flex flex-col items-center gap-20 mt-8  ">
-        
-        <button onClick={() => setNumber(number + 1)} 
-        className="bg-green-800 p-2 text-white rounded-lg">
-          Increase number
-          </button>
-          <span className="text-4xl">{number}</span>
-        <button onClick={substract}
-        className="bg-red-800 p-2 text-white rounded-lg">
-          Decrease number
-          </button>
-      </div>
-    </>
-  );
-};
+      {/* <button onClick={getData} className="bg-pink-800 text-white p-2 rounded-2xl m-5">
+        Get Data
+      </button> */}
+      {netflixData.map((elem) => {
+        console.log(elem);
 
-export default Home;
+        return (
+          <>
+            <div key={elem.id}>
+              <h1>{elem.original_title}</h1>
+              <h2>{elem.overview}</h2>
+              <img 
+              src={`https://image.tmdb.org/t/p/w500/${elem?.backdrop_path}`} alt="image"/>
+            </div>
+
+          </>
+        )
+      })}
+    </>
+  )
+}
+
+export default home
+
